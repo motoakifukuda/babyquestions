@@ -4,8 +4,6 @@
 
     <h1>質問新規投稿ページ</h1>
     
-    @include('commons.error_messages')
-    
     <div class="row">
         <div class="col-xs-6">
             {!! Form::model($question, ['route' => 'questions.store']) !!}
