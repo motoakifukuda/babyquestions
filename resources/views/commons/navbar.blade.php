@@ -8,7 +8,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">Baby Questions</a>
+                @if (Auth::check())
+                    <a class="navbar-brand" href="/questions">Baby Questions</a>
+                @else
+                    <a class="navbar-brand" href="/">Baby Questions</a>
+                @endif
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">

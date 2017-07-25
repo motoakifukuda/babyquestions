@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Question;
+
 class QuestionsController extends Controller
 {
     /**
@@ -16,7 +18,11 @@ class QuestionsController extends Controller
      */
     public function index()
     {
-        //
+        $questions = Question::all();
+
+        return view('questions.index', [
+            'questions' => $questions,
+        ]);
     }
 
     /**
@@ -26,7 +32,11 @@ class QuestionsController extends Controller
      */
     public function create()
     {
-        //
+        $question = new Question;
+        
+        return view('questions.create', [
+            'question' => $question,
+        ]);
     }
 
     /**
@@ -37,7 +47,17 @@ class QuestionsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required|max:255',
+            'question' => 'required|max:255',
+        ]);
+     
+        $question = new Question;
+        $question->title = $request->title;
+        $question->question = $request->question;
+        $question->save();
+        
+        return redirect('/questions');
     }
 
     /**
@@ -48,7 +68,11 @@ class QuestionsController extends Controller
      */
     public function show($id)
     {
-        //
+        $question = Question::find($id);
+        
+        return view('questions.show', [
+            'question' => $question,
+        ]);
     }
 
     /**
@@ -59,7 +83,11 @@ class QuestionsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $question = Question::find($id);
+        
+        return view('questions.edit', [
+            'question' => $question,
+        ]);
     }
 
     /**
@@ -71,7 +99,15 @@ class QuestionsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'answer' => 'required|max:255',
+        ]);
+        
+        $question = Question::find($id);
+        $question->answer = $request->answer;
+        $question->save();
+        
+        return redirect('/questions');
     }
 
     /**

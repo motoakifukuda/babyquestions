@@ -2,8 +2,12 @@
 
 @section('content')
     @if (Auth::check())
-        <?php $user = Auth::user(); ?>
-        {{ $user->name }}
+        <div class="center jumbotron">
+            <div class="text-center">
+                <h1>ログアウトしてやり直してください</h1>
+                {!! link_to_route('logout.get', '今すぐログアウトする', null, ['class' => 'btn btn-lg btn-primary']) !!}
+            </div>
+        </div>
     @else
         <div class="center jumbotron">
             <div class="text-center">
