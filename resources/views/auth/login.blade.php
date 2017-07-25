@@ -22,7 +22,7 @@
                 {!! Form::submit('ログインする', ['class' => 'btn btn-primary btn-block']) !!}
             {!! Form::close() !!}
             
-            <p>ユーザ登録はお済ですか？ {!! link_to_route('signup.get', 'ユーザ登録はこちら') !!}</p>
+            <p>ユーザ登録はお済みですか？ {!! link_to_route('signup.get', 'ユーザ登録はこちら') !!}</p>
         </div>
     </div>
 @endsection
