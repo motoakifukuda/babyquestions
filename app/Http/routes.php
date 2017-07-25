@@ -23,3 +23,7 @@ Route::post('signup', 'Auth\AuthController@postRegister')->name('signup.post');
 Route::get('login', 'Auth\AuthController@getLogin')->name('login.get');
 Route::post('login', 'Auth\AuthController@postLogin')->name('login.post');
 Route::get('logout', 'Auth\AuthController@getLogout')->name('logout.get');
+
+// 質問投稿
+Route::get('questions', 'QuestionsController@index');
+Route::resource('questions', 'QuestionsController');
