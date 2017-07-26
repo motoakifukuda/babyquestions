@@ -12,6 +12,7 @@
         <div class="center jumbotron">
             <div class="text-center">
                 <h1>ようこそBaby Questionsへ！</h1>
+                <h2>当サイトでは子育てに関するQ&Aを気軽に行えます。</h2>
                 {!! link_to_route('signup.get', '今すぐユーザ登録する', null, ['class' => 'btn btn-lg btn-primary']) !!}
             </div>
         </div>
