@@ -26,7 +26,7 @@
                         </li>
                     @else
                         <li>{!! link_to_route('signup.get', '新規登録はこちら') !!}</li>
-                        <li>{!! link_to_route('login.get', 'ログインはこちら') !!}</a></li>
+                        <li>{!! link_to_route('login.get', 'ログインはこちら') !!}</li>
                     @endif
                 </ul>
             </div>
