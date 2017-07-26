@@ -10,6 +10,8 @@
                 <tr>
                     <th>id</th>
                     <th>件名</th>
+                    <th>投稿者</th>
+                    <th>回答者</th>
                 </tr>
             </thead>
             <tbody>
@@ -17,6 +19,8 @@
                     <tr>
                         <td>{!! link_to_route('questions.show', $question->id, ['id' => $question->id]) !!}</td>
                         <td>{{ $question->title }}</td>
+                        <td>{{ $question->asked_name }}</td>
+                        <td>{{ $question->answered_name }}</td>
                     </tr>
                 @endforeach
             </tbody>

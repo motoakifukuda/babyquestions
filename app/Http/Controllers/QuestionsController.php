@@ -55,6 +55,7 @@ class QuestionsController extends Controller
         $question = new Question;
         $question->title = $request->title;
         $question->question = $request->question;
+        $question->asked_name = \Auth::user()->name;
         $question->save();
         
         return redirect('/questions');
@@ -105,6 +106,7 @@ class QuestionsController extends Controller
         
         $question = Question::find($id);
         $question->answer = $request->answer;
+        $question->answered_name = \Auth::user()->name;
         $question->save();
         
         return redirect('/questions');

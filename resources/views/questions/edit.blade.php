@@ -9,9 +9,17 @@
             <div class="form-group">
                 <p>件名：{{ $question->title }}</p>
             </div>
+
+            <div class="form-group">
+                <p>質問者：{{ $question->asked_name }}</p>
+            </div>
         
             <div class="form-group">
                 <p>質問：{{ $question->question }}</p>
+            </div>
+            
+            <div class="form-group">
+                <p>回答者：{{ \Auth::user()->name }}</p>
             </div>
             
             {!! Form::model($question, ['route' => ['questions.update', $question->id], 'method' => 'put']) !!}

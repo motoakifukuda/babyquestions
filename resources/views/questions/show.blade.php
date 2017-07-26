@@ -14,8 +14,16 @@
             <td>{{ $question->title }}</td>
         </tr>
         <tr>
+            <th>質問者</th>
+            <td>{{ $question->asked_name }}</td>
+        </tr>
+        <tr>
             <th>質問</th>
             <td>{{ $question->question }}</td>
+        </tr>
+        <tr>
+            <th>回答者</th>
+            <td>{{ $question->answered_name }}</td>
         </tr>
         <tr>
             <th>回答</th>
