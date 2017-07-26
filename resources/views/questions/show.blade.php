@@ -33,7 +33,7 @@
     
     {!! link_to_route('questions.index', '質問一覧に戻る', ['id' => $question->id], ['class' => 'btn btn-primary']) !!}
     
-    @if (Auth::user()->name != $question->asked_name)
+    @if (Auth::user()->name != $question->asked_name && $question->answered_name == NULL || Auth::user()->name == $question->answered_name)
         {!! link_to_route('questions.edit', 'この質問に回答する', ['id' => $question->id], ['class' => 'btn btn-primary']) !!}
     @endif
    
