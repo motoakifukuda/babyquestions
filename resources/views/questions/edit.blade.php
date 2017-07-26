@@ -26,7 +26,7 @@
                 
                 <div class="form-group">
                     {!! Form::label('answer', '回答:') !!}
-                    {!! Form::text('answer', null, ['class' => 'form-control']) !!}
+                    {!! Form::textarea('answer', null, ['class' => 'form-control']) !!}
                 </div>
         
                 {!! Form::submit('回答する', ['class' => 'btn btn-primary']) !!}

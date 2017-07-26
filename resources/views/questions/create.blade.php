@@ -15,7 +15,7 @@
                     
                 <div class="form-group">
                     {!! Form::label('question', '質問:') !!}
-                    {!! Form::text('question', null, ['class' => 'form-control']) !!}
+                    {!! Form::textarea('question', null, ['class' => 'form-control']) !!}
                 </div>
                 
                 {!! Form::submit('投稿する', ['class' => 'btn btn-primary']) !!}
