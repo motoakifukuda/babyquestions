@@ -3,6 +3,7 @@
 @section('content')
 
     <h1>質問一覧</h1>
+    <h4>idのリンクをクリックすると詳細ページへ遷移します</h4>
 
     @if (count($questions) > 0)
         <table class="table table-striped">
