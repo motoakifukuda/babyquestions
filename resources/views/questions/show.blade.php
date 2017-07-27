@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h1>id = {{ $question->id }} の質問詳細ページ</h1>
+    <h1>id = {{ $question->id }} の質問詳細画面です</h1>
     
     <table class="table table-bordered">
         <tr>

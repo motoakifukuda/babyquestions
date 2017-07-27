@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h1>id: {{ $question->id }} の質問回答ページ</h1>
+    <h1>id: {{ $question->id }} の質問回答画面です</h1>
     
     <div class="row">
         <div class="col-xs-6">

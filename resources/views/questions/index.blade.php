@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h1>質問一覧画面</h1>
+    <h1>質問一覧画面です</h1>
 
     @if (count($questions) > 0)
         <h4>idのリンクをクリックすると詳細ページへ遷移します</h4>
