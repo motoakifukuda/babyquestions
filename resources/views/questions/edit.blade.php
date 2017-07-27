@@ -25,11 +25,13 @@
             {!! Form::model($question, ['route' => ['questions.update', $question->id], 'method' => 'put']) !!}
                 
                 <div class="form-group">
-                    {!! Form::label('answer', '回答:') !!}
+                    {!! Form::label('answer', '回答を入力') !!}
                     {!! Form::textarea('answer', null, ['class' => 'form-control']) !!}
                 </div>
         
                 {!! Form::submit('回答する', ['class' => 'btn btn-primary']) !!}
+                
+                {!! link_to_route('questions.index', '質問一覧に戻る', null, ['class' => 'btn btn-primary']) !!}
         
             {!! Form::close() !!}
         </div>

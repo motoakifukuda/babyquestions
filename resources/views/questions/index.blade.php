@@ -26,7 +26,11 @@
                 @endforeach
             </tbody>
         </table>
+    @elseif (count($questions) == 0)
+        <h4>現在質問の投稿がありません</h4>
     @endif
+
+    <h4>新規質問の投稿は下記ボタンよりお願いします</h4>
     
     {!! link_to_route('questions.create', '新規質問の投稿', null, ['class' => 'btn btn-primary']) !!}
 
