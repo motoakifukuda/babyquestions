@@ -1,5 +1,5 @@
 @if (count($errors) > 0)
-    <div class="panel panel-info">
+    <div class="panel panel-warning">
         <div class="panel-heading">
             <h3 class="panel-title">以下のエラーが発生しました</h3>
         </div>
