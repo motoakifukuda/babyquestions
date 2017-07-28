@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h1>新規質問投稿画面です</h1>
+    <h1><u>新規質問投稿画面です</u></h1>
     
     <div class="row">
         <div class="col-xs-6">

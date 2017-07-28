@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h1>質問一覧画面です</h1>
+    <h1><u>質問一覧画面です</u></h1>
 
     @if (count($questions) > 0)
         <h4>idのリンクをクリックすると詳細ページへ遷移します</h4>
@@ -27,7 +27,7 @@
             </tbody>
         </table>
     @elseif (count($questions) == 0)
-        <h4>現在質問の投稿がありません</h4>
+        <h4><strong>現在質問の投稿がありません</strong></h4>
     @endif
 
     <h4>新規質問の投稿は下記ボタンよりお願いします</h4>

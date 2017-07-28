@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="text-center">
-        <h1>ユーザ新規登録画面です</h1>
+        <h1><u>ユーザ新規登録画面です</u></h1>
     </div>
     
     <div class="row">
